@@ -4,3 +4,7 @@ init:
 
 up:
 	cd docker && docker-compose up
+
+schema-update:
+	docker exec -ti rest-ddd_php /usr/share/nginx/html/bin/console doctrine:database:create --if-not-exists
+	docker exec -ti rest-ddd_php /usr/share/nginx/html/bin/console doctrine:schema:update --force
