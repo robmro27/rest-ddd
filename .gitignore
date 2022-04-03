@@ -18,3 +18,7 @@ yarn-error.log
 /.idea
 /docker/data
 /docker/.env
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###

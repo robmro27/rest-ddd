@@ -4,8 +4,9 @@ namespace App\Domain\Player;
 
 use DateTimeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\UserInterface;
 
-class Player
+class Player implements UserInterface
 {
     private int $id;
     private string $username;
@@ -169,4 +170,17 @@ class Player
         $this->guesses = $guesses;
     }
 
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function eraseCredentials()
+    {
+    }
 }
