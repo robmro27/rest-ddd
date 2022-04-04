@@ -5,7 +5,7 @@ namespace App\Domain\Game;
 use App\Domain\League\League;
 use App\Domain\Team\Team;
 use DateTimeInterface;
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 class Game
 {
@@ -15,7 +15,7 @@ class Game
     private Team $homeTeam;
     private Team $awayTeam;
     private League $league;
-    private ArrayCollection $guesses;
+    private Collection $guesses;
 
     /**
      * @return int

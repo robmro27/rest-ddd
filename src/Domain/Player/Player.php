@@ -3,7 +3,7 @@
 namespace App\Domain\Player;
 
 use DateTimeInterface;
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 class Player implements UserInterface
@@ -16,7 +16,7 @@ class Player implements UserInterface
     private string $email;
     private int $avatar;
     private DateTimeInterface $createdAt;
-    private ArrayCollection $guesses;
+    private Collection $guesses;
 
     public function __construct()
     {
