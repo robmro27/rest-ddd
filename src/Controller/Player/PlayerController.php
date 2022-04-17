@@ -2,7 +2,8 @@
 
 namespace App\Controller\Player;
 
-use App\Application\Player\CreatePlayerHandler;
+use App\Application\Handler\Player\CreatePlayerHandler;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,7 +30,7 @@ class PlayerController extends AbstractController
                     'avatar' => $playerArray['avatar']
                 ]
             );
-        } catch (\Exception $exception) {
+        } catch (Exception $exception) {
             return new JsonResponse($exception->getMessage());
         }
 

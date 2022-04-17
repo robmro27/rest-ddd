@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Command;
 
-use App\Application\League\CreateLeagueHandler;
+use App\Application\Handler\League\CreateLeagueHandler;
 use App\Infrastructure\Services\FetchLeaguesInterface;
 use Exception;
 use Symfony\Component\Console\Command\Command;
